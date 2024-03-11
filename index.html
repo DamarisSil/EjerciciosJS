@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios .JS</title>
+</head>
+<body>
+
+
+<script>
+    
+    let arr1 = ["This", "is", "a", "sentence."];
+
+    function printOutString() {
+      let result = arr1.join(" ");
+      console.log(result);
+    }
+
+    printOutString();
+  </script>
+
+<script>
+function doubleArrayValues(numbers) {
+    let doubledArray = numbers.map(function(number) {
+      return number * 2;
+    });
+    console.log(doubledArray);
+  }
+  
+  let exampleArray1 = [1, 2, 4, 5];
+  doubleArrayValues(exampleArray1);
+</script>
+
+<script>
+function computeSumAndProduct(numbers) {
+    let sum = numbers.reduce(function (accumulator, currentValue) {
+      return accumulator + currentValue;
+    }, 0);
+  
+    let product = numbers.reduce(function (accumulator, currentValue) {
+      return accumulator * currentValue;
+    }, 1);
+  
+    console.log(`The sum is ${sum}. The product is ${product}.`);
+  }
+  
+  // Ejemplo de uso con el array [1, 2, 3, 4]
+  let exampleArray2 = [1, 2, 3, 4];
+  computeSumAndProduct(exampleArray2);
+</script>
+
+<script>
+let student1Courses = ['Math', 'English', 'Programming'];
+let student2Courses = ['Geography', 'Spanish', 'Programming'];
+
+function findCommonCourses(courses1, courses2) {
+  let commonCourses = courses1.filter(course => courses2.includes(course));
+
+  if (commonCourses.length > 0) {
+    console.log('Common courses: ' + commonCourses.join(', '));
+  } else {
+    console.log('No common courses found.');
+  }
+}
+
+findCommonCourses(student1Courses, student2Courses);
+</script>
+
+<script>
+let people = ["Maria", "Dani", "Luis", "Juan", "Camila"];
+console.log("All people:", people);
+people = people.filter(name => name !== "Dani");
+people = people.filter(name => name !== "Juan");
+people.unshift(people.splice(people.indexOf("Luis"), 1)[0]);
+let yourName = "YourName";
+people.push(yourName);
+for (let i = 0; i < people.length; i++) {
+  console.log(people[i]);
+  if (people[i] === "Maria") {
+    break;
+  }
+}
+let mariaIndex = people.indexOf("Maria");
+console.log("Index of 'Maria':", mariaIndex);
+console.log("Updated array:", people);
+
+</script>
+
+<script>
+function bubbleSort(arr) {
+    let n = arr.length;
+    let swapped;
+  
+    do {
+      swapped = false;
+  
+      for (let i = 0; i < n - 1; i++) {
+        if (arr[i] > arr[i + 1]) {
+          let temp = arr[i];
+          arr[i] = arr[i + 1];
+          arr[i + 1] = temp;
+
+          swapped = true;
+        }
+      }
+  
+      n--;
+    } while (swapped);
+  
+    return arr;
+  }
+  
+  let inputArray = [3, 6, 12, 5, 100, 1];
+  let sortedArray = bubbleSort(inputArray);
+  console.log(sortedArray);
+</script>
+
+</body>
+</html>
