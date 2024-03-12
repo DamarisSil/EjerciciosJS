@@ -3,89 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
   <title>Ejercicios .JS</title>
+  <style>
+    body {
+      background-color: #07e207; /* Color de fondo */
+      padding: 20px; /* Espaciado alrededor del contenido */
+    }
+
+    h1 {
+      text-align: center; /* Centra el texto */
+    }
+
+    .container {
+      background-color: #f0f0f0; /* Color de fondo del contenedor */
+      padding: 5px; /* Espaciado interno del contenedor */
+      border-radius: 5px; /* Bordes redondeados */
+      margin-bottom: 5px; /* Espaciado inferior entre contenedores */
+      max-width: 700px; /* Ancho máximo del contenedor */
+      max-height: 100px; /* Altura máxima del contenedor */
+      overflow: auto; /* Añade barras de desplazamiento si el contenido excede las dimensiones */
+    }
+
+    .btn-success {
+      background-color: #28a745; /* Color de fondo del botón */
+      border-color: #28a745; /* Color del borde del botón */
+    }
+
+    .btn-success:hover {
+      background-color: #218838; /* Color de fondo del botón al pasar el ratón por encima */
+      border-color: #1e7e34; /* Color del borde del botón al pasar el ratón por encima */
+    }
+    
+
+    /* Agrega estilo para alinear el código a la izquierda */
+     .code-container {
+      text-align: left;
+      white-space: pre-wrap; /* Mantiene los saltos de línea y envuelve el texto */
+      font-size: 16px; /* Tamaño de letra deseado */
+    }
+
+    /* Estilo para centrar la imagen */
+    .exercise-image {
+      display: block;
+      margin: auto;
+      max-width: 60%;
+      max-height: 200px; /* Establece la altura máxima deseada */
+      margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+    }
+  </style>
 </head>
 <body>
 
+  <div class="container">
+    <h2 onclick="printOutString()">Ejercicio 1</h2>
+    <img src="./assets/Captura de pantalla 2024-03-11 174603.png" alt="Descripción de la imagen" class="exercise-image">
+    <img src="./assets/Captura de pantalla 2024-03-11 181230.png" alt="Descripción de la imagen" class="exercise-image">
+  </div>  
 
-<script>
-    
-    let arr1 = ["This", "is", "a", "sentence."];
+  <div class="container">
+    <h2 onclick="printOutString()">Ejercicio 2</h2>
+    <img src="./assets/Captura de pantalla 2024-03-11 172803.png" alt="Descripción de la imagen" class="exercise-image">
+    <img src="./assets/Captura de pantalla 2024-03-11 181510.png" alt="Descripción de la imagen" class="exercise-image">
+  </div>
 
-    function printOutString() {
-      let result = arr1.join(" ");
-      console.log(result);
-    }
+  <div class="container">
+    <h2 onclick="printOutString()">Ejercicio 3</h2>
+    <img src="./assets/Captura de pantalla 2024-03-11 165409.png" alt="Descripción de la imagen" class="exercise-image">
+    <img src="./assets/Captura de pantalla 2024-03-11 181832.png" alt="Descripción de la imagen" class="exercise-image">
+  </div>
 
-    printOutString();
-  </script>
+  <div class="container">
+    <h2 onclick="printOutString()">Ejercicio 4</h2>
+    <img src="./assets/Captura de pantalla 2024-03-11 175117.png" alt="Descripción de la imagen" class="exercise-image">
+    <img src="./assets/Captura de pantalla 2024-03-11 182142.png" alt="Descripción de la imagen" class="exercise-image">
+  </div>
 
-<script>
-function doubleArrayValues(numbers) {
-    let doubledArray = numbers.map(function(number) {
-      return number * 2;
-    });
-    console.log(doubledArray);
-  }
-  
-  let exampleArray1 = [1, 2, 4, 5];
-  doubleArrayValues(exampleArray1);
-</script>
+  <div class="container">
+    <h2 onclick="printOutString()">Ejercicio 5</h2>
+    <img src="./assets/Captura de pantalla 2024-03-11 175233.png" alt="Descripción de la imagen" class="exercise-image">
+    <img src="./assets/Captura de pantalla 2024-03-11 182325.png" alt="Descripción de la imagen" class="exercise-image">
+  </div>
 
-<script>
-function computeSumAndProduct(numbers) {
-    let sum = numbers.reduce(function (accumulator, currentValue) {
-      return accumulator + currentValue;
-    }, 0);
-  
-    let product = numbers.reduce(function (accumulator, currentValue) {
-      return accumulator * currentValue;
-    }, 1);
-  
-    console.log(`The sum is ${sum}. The product is ${product}.`);
-  }
-  
-  // Ejemplo de uso con el array [1, 2, 3, 4]
-  let exampleArray2 = [1, 2, 3, 4];
-  computeSumAndProduct(exampleArray2);
-</script>
-
-<script>
-let student1Courses = ['Math', 'English', 'Programming'];
-let student2Courses = ['Geography', 'Spanish', 'Programming'];
-
-function findCommonCourses(courses1, courses2) {
-  let commonCourses = courses1.filter(course => courses2.includes(course));
-
-  if (commonCourses.length > 0) {
-    console.log('Common courses: ' + commonCourses.join(', '));
-  } else {
-    console.log('No common courses found.');
-  }
-}
-
-findCommonCourses(student1Courses, student2Courses);
-</script>
-
-<script>
-let people = ["Maria", "Dani", "Luis", "Juan", "Camila"];
-console.log("All people:", people);
-people = people.filter(name => name !== "Dani");
-people = people.filter(name => name !== "Juan");
-people.unshift(people.splice(people.indexOf("Luis"), 1)[0]);
-let yourName = "YourName";
-people.push(yourName);
-for (let i = 0; i < people.length; i++) {
-  console.log(people[i]);
-  if (people[i] === "Maria") {
-    break;
-  }
-}
-let mariaIndex = people.indexOf("Maria");
-console.log("Index of 'Maria':", mariaIndex);
-console.log("Updated array:", people);
-
-</script>
+  <div class="container">
+    <h2 onclick="printOutString()">Ejercicio 6</h2>
+    <img src="./assets/Captura de pantalla 2024-03-11 175314.png" alt="Descripción de la imagen" class="exercise-image">
+    <img src="./assets/Captura de pantalla 2024-03-11 182420.png" alt="Descripción de la imagen" class="exercise-image">
+  </div>
 
 <script>
 function bubbleSort(arr) {
@@ -115,6 +119,3 @@ function bubbleSort(arr) {
   let sortedArray = bubbleSort(inputArray);
   console.log(sortedArray);
 </script>
-
-</body>
-</html>
